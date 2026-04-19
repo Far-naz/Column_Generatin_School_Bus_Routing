@@ -1,0 +1,12 @@
+data/
+
+# Python cache/artifacts
+__pycache__/
+
+
+.venv/*
+src/logs/*
+.vscode/*
+
+
+
