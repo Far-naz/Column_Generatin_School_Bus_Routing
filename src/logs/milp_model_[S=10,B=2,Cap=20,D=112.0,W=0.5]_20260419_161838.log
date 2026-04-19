@@ -1,0 +1,5 @@
+2026-04-19 16:18:38 - INFO - number of nodes: 56
+2026-04-19 16:21:28 - INFO - Main problem solved in 170.15 seconds
+2026-04-19 16:21:28 - INFO - Main problem objective : 0.29900471109482163
+2026-04-19 16:21:28 - INFO - New route nodes:[0, 10, 7, 1, 2, 8, 6, 56] covered_students: [1, 2, 6, 7, 8, 10]- total walking distance:0.0- total distance:110.97854703985904
+2026-04-19 16:21:28 - INFO - New route nodes:[0, 3, 5, 48, 4, 56] covered_students: [3, 4, 5, 9]- total walking distance:0.29900471109482163- total distance:111.91853044583965

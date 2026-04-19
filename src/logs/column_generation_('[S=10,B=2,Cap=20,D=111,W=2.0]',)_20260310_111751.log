@@ -1,0 +1,813 @@
+2026-03-10 11:17:51 - INFO - Model info: ('[S=10,B=2,Cap=20,D=111,W=2.0]',)
+2026-03-10 11:17:51 - INFO - Number of stops in the problem model: 387
+2026-03-10 11:17:51 - INFO - Initial routes: [Route(stops=[Stop(Id=0, is_depot=True, is_student=False, lat=61.124656, lon=10.473133, second_idx=0, is_covered=False, std_id=None, name=33337, labels=None), Stop(Id=1, is_depot=False, is_student=True, lat=61.0589, lon=10.4188, second_idx=1, is_covered=False, std_id=1, name=86945, labels=None), Stop(Id=2, is_depot=False, is_student=True, lat=61.0579, lon=10.4179, second_idx=2, is_covered=False, std_id=2, name=86946, labels=None), Stop(Id=3, is_depot=False, is_student=True, lat=61.0321, lon=10.5461, second_idx=3, is_covered=False, std_id=3, name=164493, labels=None), Stop(Id=4, is_depot=False, is_student=True, lat=61.0353, lon=10.6869, second_idx=4, is_covered=False, std_id=4, name=109294, labels=None), Stop(Id=5, is_depot=False, is_student=True, lat=60.9481, lon=10.6079, second_idx=5, is_covered=False, std_id=5, name=116787, labels=None), Stop(Id=6, is_depot=False, is_student=True, lat=61.0702, lon=10.6342, second_idx=6, is_covered=False, std_id=6, name=108866, labels=None), Stop(Id=7, is_depot=False, is_student=True, lat=61.1028, lon=10.4075, second_idx=7, is_covered=False, std_id=7, name=109501, labels=None), Stop(Id=8, is_depot=False, is_student=True, lat=61.1068, lon=10.4634, second_idx=8, is_covered=False, std_id=8, name=168681, labels=None), Stop(Id=9, is_depot=False, is_student=True, lat=60.6748, lon=10.9095, second_idx=9, is_covered=False, std_id=9, name=160415, labels=None), Stop(Id=10, is_depot=False, is_student=True, lat=61.3228, lon=9.84075, second_idx=10, is_covered=False, std_id=10, name=119568, labels=None), Stop(Id=0, is_depot=True, is_student=False, lat=61.124656, lon=10.473133, second_idx=386, is_covered=False, std_id=None, name=None, labels=None)], total_distance=249.4528559873454, total_walking_distance=1000.0, served_students=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], cost=0.0, lambda_value=None)]
+2026-03-10 11:17:51 - INFO - --- Iteration 1 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 1.0 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: 1000.0, 2: 0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 0.0, 10: 0.0}, 0.0
+2026-03-10 11:17:51 - INFO - Adding single student routes to master problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 2 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.8888888888888888 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.11111111111111116 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.11111111111111116 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.11111111111111116 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.11111111111111116 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.11111111111111116 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.11111111111111116 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.11111111111111116 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.11111111111111116 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.11111111111111116 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.1111111111111111 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Duals: {1: 111.11111111111111, 2: 111.11111111111111, 3: 111.11111111111111, 4: 111.11111111111111, 5: 111.11111111111111, 6: 111.11111111111111, 7: 111.11111111111111, 8: 111.11111111111111, 9: 111.11111111111111, 10: 111.11111111111111}, -111.11111111111111
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 3 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 500.0, 2: -0.0, 3: 0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 4 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: 500.0, 3: -0.0, 4: 0.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 5 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: -0.0, 3: -0.0, 4: 500.0, 5: 0.0, 6: 0.0, 7: 0.0, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 6 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: -0.0, 3: 1.6902800107492506, 4: 0.0, 5: 0.0, 6: 498.30971998925077, 7: 0.0, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 7 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: -0.0, 3: 0.0, 4: 1.6902800107492506, 5: 0.0, 6: 1.4874543926696164, 7: 496.82226559658113, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 8 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.0 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: -0.0, 3: 1.039267292233563, 4: 0.6510127185156875, 5: 0.0, 6: 0.0, 7: 0.0, 8: 498.30971998925077, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 9 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.0 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Duals: {1: -0.0, 2: -0.0, 3: 1.4874543926695765, 4: 0.20282561807967414, 5: 497.86153288881474, 6: 0.0, 7: 0.44818710043604515, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 10 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.0 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.0, 2: -0.0, 3: 0.0, 4: 0.6510127185156307, 5: 499.34898728148437, 6: 4.851674617611934e-14, 7: 0.0, 8: 0.0, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 11 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.5 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.5 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.5 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.5 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.0 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.0, 2: -0.0, 3: 1.0392672922335464, 4: 0.6510127185156792, 5: 498.30971998925077, 6: 0.0, 7: 0.0, 8: 2.4868995751603507e-14, 9: 500.0, 10: 500.0}, -500.0
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 12 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.33333333333333337 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.3333333333333333 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.33333333333333337 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333326 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Duals: {1: 331.7724715138234, 2: -0.0, 3: 1.4874543926696333, 4: 0.0, 5: 0.2028256180796173, 6: 0.0, 7: 332.4234842323391, 8: 0.0, 9: 665.8862357569117, 10: 334.11376424308827}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 13 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.33333333333333337 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.33333333333333337 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333326 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 331.7724715138234, 2: 0.0, 3: 0.0, 4: 0.0, 5: 1.6902800107492506, 6: -0.0, 7: 332.4234842323391, 8: 0.0, 9: 665.8862357569117, 10: 334.11376424308827}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 14 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.33333333333333337 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.3333333333333333 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.33333333333333337 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333326 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.8364416741539372, 2: 330.93602983966946, 3: 0.0, 4: 0.0, 5: 1.6902800107492506, 6: 332.4234842323391, 7: 0.0, 8: 0.0, 9: 665.8862357569117, 10: 334.1137642430883}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 15 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.33333333333333337 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.33333333333333337 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333326 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: 0.0, 4: 0.0, 5: 1.690280010749177, 6: 332.4234842323391, 7: 0.0, 8: 7.349676423018536e-14, 9: 665.8862357569117, 10: 334.1137642430882}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 16 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.33333333333333337 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.3333333333333333 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.33333333333333337 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333326 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 331.7724715138234, 2: -0.0, 3: 1.4874543926696333, 4: 0.0, 5: 0.2028256180796173, 6: 0.0, 7: 332.4234842323391, 8: 0.0, 9: 665.8862357569117, 10: 334.11376424308827}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 17 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.3333333333333333 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.3333333333333333 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.3333333333333333 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.33333333333333337 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.3333333333333334 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 331.56964589574375, 2: 0.20282561807963428, 3: 1.690280010749234, 4: 0.0, 5: -0.0, 6: 0.0, 7: 332.42348423233904, 8: 1.6653345369377348e-14, 9: 665.8862357569117, 10: 334.1137642430883}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 18 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.3333333333333333 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.3333333333333333 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.3333333333333334 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 23: 0.3333333333333333 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 26: 0.3333333333333333 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: 1.3034018309099338e-13, 4: -0.0, 5: 1.6902800107492506, 6: 332.4234842323391, 7: 0.0, 8: -1.3034018309099338e-13, 9: 665.8862357569117, 10: 334.11376424308827}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 19 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.3333333333333333 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.33333333333333337 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.33333333333333337 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 20: 0.33333333333333337 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 23: 0.3333333333333333 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 26: 0.33333333333333337 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:51 - INFO - Duals: {1: 0.0, 2: 331.77247151382335, 3: 1.6653345369377348e-14, 4: -5.684341886080802e-14, 5: 1.6902800107494613, 6: 332.4234842323389, 7: 2.2737367544323206e-13, 8: -2.2737367544323206e-13, 9: 665.8862357569117, 10: 334.1137642430883}, -665.8862357569117
+2026-03-10 11:17:51 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:51 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:51 - INFO - --- Iteration 20 ---
+2026-03-10 11:17:51 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:51 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:51 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:51 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:51 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:51 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:51 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:51 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:51 - INFO - Lambda for Route 9: 0.3333333333333333 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:51 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 13: 0.16666666666666674 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:51 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:51 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.3333333333333333 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.16666666666666669 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.16666666666666663 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.16666666666666669 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: -1.1368683772161603e-13, 4: -0.0, 5: 1.6902800107492506, 6: 332.4234842323391, 7: -0.0, 8: 1.1368683772161603e-13, 9: 665.8862357569118, 10: 334.1137642430884}, -665.8862357569118
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 21 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.3333333333333333 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.16666666666666674 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.3333333333333333 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.16666666666666669 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.16666666666666663 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.16666666666666669 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: -1.1368683772161603e-13, 4: -0.0, 5: 1.6902800107492506, 6: 332.4234842323391, 7: -0.0, 8: 1.1368683772161603e-13, 9: 665.8862357569118, 10: 334.1137642430884}, -665.8862357569118
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 22 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.3333333333333333 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.16666666666666674 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.3333333333333333 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.16666666666666669 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.16666666666666663 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.16666666666666669 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: -1.1368683772161603e-13, 4: -0.0, 5: 1.6902800107492506, 6: 332.4234842323391, 7: -0.0, 8: 1.1368683772161603e-13, 9: 665.8862357569118, 10: 334.1137642430884}, -665.8862357569118
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 23 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.33333333333333326 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.33333333333333337 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.3333333333333333 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.3333333333333333 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.8364416741538889, 2: 330.93602983966946, 3: -0.0, 4: -1.1368683772161603e-13, 5: 1.6902800107493643, 6: 332.4234842323391, 7: 0.0, 8: 0.0, 9: 665.8862357569117, 10: 334.1137642430883}, -665.8862357569117
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 24 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.3333333333333334 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.3333333333333332 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.3333333333333333 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.3333333333333333 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.33333333333333337 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.3333333333333333 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 32: 0.0 -> stops [0, 6, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 1, 6, 5]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.0, 2: 331.7724715138234, 3: -0.0, 4: -4.0190073491430667e-14, 5: 1.6902800107492908, 6: 332.42348423233904, 7: 0.0, 8: 0.0, 9: 665.8862357569117, 10: 334.11376424308827}, -665.8862357569117
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 25 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.33333333333333337 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.33333333333333326 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.3333333333333333 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.33333333333333337 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.0 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.33333333333333337 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 32: 0.0 -> stops [0, 6, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 1, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 33: 0.33333333333333337 -> stops [0, 5, 9, 386], walk_dis 0.0, cover_stds [9, 5]
+2026-03-10 11:17:52 - INFO - Duals: {1: 2.5267216849031877, 2: 330.3726031694197, 3: -0.0, 4: 1.6902800107492506, 5: -0.0, 6: 331.8600575620893, 7: 0.0, 8: 0.0, 9: 666.4496624271615, 10: 333.55033757283854}, -666.4496624271615
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 26 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.25 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.25 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.25 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.25 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.25 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.25 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 32: 0.0 -> stops [0, 6, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 1, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 33: 0.25 -> stops [0, 5, 9, 386], walk_dis 0.0, cover_stds [9, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 34: 0.25 -> stops [0, 384, 1, 2, 4, 6, 386], walk_dis 1.4874543926696164, cover_stds [6, 1, 2, 4, 10]
+2026-03-10 11:17:52 - INFO - Duals: {1: 248.61589405121873, 2: -0.0, 3: 0.0, 4: 0.0, 5: -0.0, 6: 250.95718678048365, 7: 247.77945237706473, 8: 1.6902800107492506, 9: 749.0428132195163, 10: 250.95718678048365}, -749.0428132195163
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 27 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.25 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.25 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.25 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.25 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 0.25 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.25 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 32: 0.0 -> stops [0, 6, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 1, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 33: 0.25 -> stops [0, 5, 9, 386], walk_dis 0.0, cover_stds [9, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 34: 0.25 -> stops [0, 384, 1, 2, 4, 6, 386], walk_dis 1.4874543926696164, cover_stds [6, 1, 2, 4, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 35: 0.0 -> stops [0, 6, 8, 7, 384, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 8, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.8364416741539458, 2: 247.77945237706473, 3: 1.690280010749234, 4: 0.0, 5: -0.0, 6: 250.9571867804836, 7: 247.77945237706473, 8: 1.6653345369377348e-14, 9: 749.0428132195162, 10: 250.9571867804836}, -749.0428132195162
+2026-03-10 11:17:52 - INFO - Starting heuristic pricing problem.
+2026-03-10 11:17:52 - INFO - New route successfully added with negative Reduced cost
+2026-03-10 11:17:52 - INFO - --- Iteration 28 ---
+2026-03-10 11:17:52 - INFO - restricted_master_problem called with fixed_lambda=False
+2026-03-10 11:17:52 - INFO - Lambda for Route 0: 0.0 -> stops [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 386], walk_dis 1000.0, cover_stds [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 1: 0.0 -> stops [0, 1, 386], walk_dis 0.0, cover_stds [1]
+2026-03-10 11:17:52 - INFO - Lambda for Route 2: 0.0 -> stops [0, 2, 386], walk_dis 0.0, cover_stds [2]
+2026-03-10 11:17:52 - INFO - Lambda for Route 3: 0.0 -> stops [0, 3, 386], walk_dis 0.0, cover_stds [3]
+2026-03-10 11:17:52 - INFO - Lambda for Route 4: 0.0 -> stops [0, 4, 386], walk_dis 0.0, cover_stds [4]
+2026-03-10 11:17:52 - INFO - Lambda for Route 5: 0.0 -> stops [0, 5, 386], walk_dis 0.0, cover_stds [5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 6: 0.0 -> stops [0, 6, 386], walk_dis 0.0, cover_stds [6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 7: 0.0 -> stops [0, 7, 386], walk_dis 0.0, cover_stds [7]
+2026-03-10 11:17:52 - INFO - Lambda for Route 8: 0.0 -> stops [0, 8, 386], walk_dis 0.0, cover_stds [8]
+2026-03-10 11:17:52 - INFO - Lambda for Route 9: 0.0 -> stops [0, 9, 386], walk_dis 0.0, cover_stds [9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 10: 0.0 -> stops [0, 10, 386], walk_dis 0.0, cover_stds [10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 11: 0.0 -> stops [0, 6, 4, 5, 3, 8, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 6, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 12: 0.0 -> stops [0, 10, 1, 386], walk_dis 0.0, cover_stds [1, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 13: 0.0 -> stops [0, 10, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 14: 0.0 -> stops [0, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 15: 0.0 -> stops [0, 384, 6, 3, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 6, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 16: 0.0 -> stops [0, 372, 7, 6, 4, 386], walk_dis 0.6510127185156792, cover_stds [4, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 17: 0.0 -> stops [0, 8, 4, 363, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 18: 0.0 -> stops [0, 7, 4, 5, 3, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 19: 0.0 -> stops [0, 6, 4, 5, 1, 386], walk_dis 0.0, cover_stds [1, 6, 4, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 20: 1.0 -> stops [0, 8, 4, 363, 5, 3, 386], walk_dis 1.6902800107492506, cover_stds [3, 8, 4, 5, 9]
+2026-03-10 11:17:52 - INFO - Lambda for Route 21: 0.0 -> stops [0, 7, 3, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 22: 0.0 -> stops [0, 7, 5, 1, 386], walk_dis 0.0, cover_stds [1, 7, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 23: 0.0 -> stops [0, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 24: 0.0 -> stops [0, 8, 6, 5, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 25: 0.0 -> stops [0, 7, 3, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 7, 1, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 26: 0.0 -> stops [0, 8, 10, 7, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 8, 7, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 27: 0.0 -> stops [0, 6, 5, 3, 2, 1, 386], walk_dis 0.0, cover_stds [1, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 28: 0.0 -> stops [0, 6, 5, 3, 7, 2, 1, 386], walk_dis 0.0, cover_stds [1, 7, 2, 6, 3, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 29: 0.0 -> stops [0, 8, 6, 5, 2, 386], walk_dis 0.0, cover_stds [2, 8, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 30: 0.0 -> stops [0, 8, 2, 5, 6, 4, 386], walk_dis 0.0, cover_stds [4, 8, 2, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 31: 0.0 -> stops [0, 8, 2, 6, 5, 386], walk_dis 0.0, cover_stds [5, 8, 2, 6]
+2026-03-10 11:17:52 - INFO - Lambda for Route 32: 0.0 -> stops [0, 6, 5, 1, 2, 386], walk_dis 0.0, cover_stds [2, 1, 6, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 33: 0.0 -> stops [0, 5, 9, 386], walk_dis 0.0, cover_stds [9, 5]
+2026-03-10 11:17:52 - INFO - Lambda for Route 34: 0.0 -> stops [0, 384, 1, 2, 4, 6, 386], walk_dis 1.4874543926696164, cover_stds [6, 1, 2, 4, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 35: 0.0 -> stops [0, 6, 8, 7, 384, 1, 386], walk_dis 1.4874543926696164, cover_stds [1, 8, 7, 6, 10]
+2026-03-10 11:17:52 - INFO - Lambda for Route 36: 1.0 -> stops [0, 384, 7, 8, 1, 2, 3, 6, 386], walk_dis 1.4874543926696164, cover_stds [6, 8, 7, 1, 2, 3, 10]
+2026-03-10 11:17:52 - INFO - Duals: {1: 0.0, 2: 2.5267216849031877, 3: 0.0, 4: 1.6902800107492506, 5: -0.0, 6: 1.4874543926696167, 7: 1.6902800107492508, 8: 0.0, 9: 7.394736099071306, 10: 3.1777344034188673}, -7.394736099071306
+2026-03-10 11:17:52 - INFO - Integer solution found!
+2026-03-10 11:17:52 - INFO - --- Final RMP Solve ---
+2026-03-10 11:17:52 - INFO - Optimal objective: 3.1777344034188673
+2026-03-10 11:17:52 - INFO - Route usage:
+2026-03-10 11:17:52 - INFO - Route: [0, 8, 4, 363, 5, 3, 386], total walking time: 1.6902800107492506, total distance: 110.55694337784256,  students: [3, 8, 4, 5, 9], pickup point: {8: 8, 4: 4, 9: 363, 5: 5, 3: 3}
+2026-03-10 11:17:52 - INFO - Route: [0, 384, 7, 8, 1, 2, 3, 6, 386], total walking time: 1.4874543926696164, total distance: 110.37415210756444,  students: [6, 8, 7, 1, 2, 3, 10], pickup point: {10: 384, 7: 7, 8: 8, 1: 1, 2: 2, 3: 3, 6: 6}
+2026-03-10 11:17:52 - INFO - Duplicate students found in routes: {3: [0, 1], 8: [0, 1]}. Removing duplicates from the most expensive route.
+2026-03-10 11:17:52 - INFO - Student 3 is served by multiple routes: [0, 1]
+2026-03-10 11:17:52 - INFO - Removing student 3 from route 0 with distance 110.55694337784256
+2026-03-10 11:17:52 - INFO - Student 8 is served by multiple routes: [0, 1]
+2026-03-10 11:17:52 - INFO - Removing student 8 from route 0 with distance 110.55584640836258
+2026-03-10 11:17:52 - INFO - Final routes:
+2026-03-10 11:17:52 - INFO - Route 0: [0, 4, 363, 5, 386]- Distance: 109.28378472716096, Served students: [4, 5, 9], walking distance: 1.6902800107492506
+2026-03-10 11:17:52 - INFO - Route 1: [0, 384, 7, 8, 1, 2, 3, 6, 386]- Distance: 110.37415210756444, Served students: [6, 8, 7, 1, 2, 3, 10], walking distance: 1.4874543926696164
