@@ -60,6 +60,14 @@ Logger files are written under:
 
 Current logger behavior: each run creates a new timestamped log file.
 
+## Main Run Code
+
+The main runnig code:
+ 
+```bash
+python src/run_main.py
+```
+
 ## Column Generation Fallback Logic
 
 In column generation, heuristic pricing is attempted first.
@@ -68,15 +76,6 @@ If heuristic pricing cannot produce a route, exact pricing is attempted as fallb
 - If exact pricing succeeds, the process continues.
 - If exact pricing also fails, the run is flagged/stopped by result mode.
 
-## Common Troubleshooting
-
-### `ModuleNotFoundError: No module named 'src'`
-
-Use the project-root run style shown above (`python src/...`) or run module-style commands consistently from root.
-
-### Duplicate-looking logs
-
-If multiple runs are executed, check separate timestamped files in `src/logs/`.
 
 ## Notes
 
