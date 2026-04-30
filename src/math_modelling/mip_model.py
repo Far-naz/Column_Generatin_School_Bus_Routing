@@ -8,20 +8,171 @@ import logging
 import gurobipy as gp
 from gurobipy import GRB
 
+from dataclasses import dataclass
 
-def main_problem(problem_model: InputModel, logger: logging.Logger):
+
+@dataclass
+class DecisionVar:
+    x: dict
+    x_hat: dict
+    u: dict
+    z: dict
+
+    def __init__(self, x, x_hat, u, z) -> None:
+        self.x = x
+        self.x_hat = x_hat
+        self.u = u
+        self.z = z
+
+
+def _build_route_solution(
+    sp: gp.Model,
+    input_model: InputModel,
+    decision_var: DecisionVar,
+    logger: logging.Logger,
+)->list[Route]:
+    K = input_model.number_of_vehicles
+    S = input_model.students
+    N_H = input_model.all_stop_ids[:-1]
+    W = input_model.walking_distance_list
+    d = input_model.distance_matrix
+
+    logger.info(f"Main problem objective : {sp.objVal}")
+    final_route: list[Route] = []
+    routes = {}
+    for k in range(K):
+        new_nodes = [0]
+        current = 0
+        while True:
+            found = False
+            for j in N_H:
+                if (
+                    j != current
+                    and decision_var.x.get((current, j, k)) is not None
+                    and decision_var.x[current, j, k].X > 0.5
+                ):
+                    next_node = j
+                    found = True
+                    break
+            if not found or next_node == 0:
+                break
+            new_nodes.append(next_node)
+            current = next_node
+        new_nodes.append(input_model.last_depot.second_id)  # 0)
+        routes[k] = new_nodes
+
+    for k in range(K):
+        pickup_stop_students = {}
+        for i in N_H:
+            if decision_var.z[i, k].X > 0.5 and i != 0:
+                for s in S:
+                    Cs = s.covering_stops
+                    if any(c.second_id == i for c in Cs):
+                        pickup_stop_students[s] = i
+        covered_students = [
+            s
+            for s in S
+            if any(decision_var.z[i.second_id, k].X > 0.5 for i in s.covering_stops)
+        ]
+        route_cost = sum(W[i] for i in N_H if decision_var.z[i, k].X > 0.5)
+        total_distance = sum(
+            d[i, j] * decision_var.x[i, j, k].X
+            for i in N_H
+            for j in N_H
+            if i != j
+            if decision_var.x[i, j, k].X > 0.5
+        )
+
+        logger.info(
+            f"New route nodes:{routes[k]} covered_students: {[s.second_id for s in covered_students]}- total walking distance:{route_cost}- total distance:{total_distance}"
+        )
+        result_route = Route(
+            stops=routes[k],
+            served_students=[s.second_id for s in covered_students],
+            total_distance=total_distance,
+            total_walking_distance=route_cost,
+        )
+
+        final_route.append(result_route)
+
+    return final_route
+
+
+def _build_constraints(sp: gp.Model, dec_var: DecisionVar, problem_model: InputModel):
     K = problem_model.number_of_vehicles
     Q = problem_model.capacity_of_vehicle
-    max_route_distance = problem_model.max_travel_distance
-    d = problem_model.distance_matrix
     S = problem_model.students
     S_ids = problem_model.all_student_ids
     N_H = problem_model.all_stop_ids[:-1]
-    W = problem_model.walking_distance_list
 
-    logger.info(f"number of nodes: {len(N_H)}")
+    sp.addConstrs(
+        gp.quicksum(
+            dec_var.z[i.second_id, k] for i in s.covering_stops for k in range(K)
+        )
+        == 1
+        for s in S
+    )
 
-    sp = gp.Model("main_problem")
+    sp.addConstr(gp.quicksum(dec_var.z[0, k] for k in range(K)) <= K)
+
+    sp.addConstrs(
+        gp.quicksum(dec_var.x[i, j, k] for j in N_H if j != i) == dec_var.z[i, k]
+        for i in N_H
+        for k in range(K)
+    )
+
+    for k in range(K):
+        for i in N_H:
+            if i == 0:
+                continue
+            sp.addConstr(
+                gp.quicksum(dec_var.x[i, j, k] for j in N_H if j != i)
+                == gp.quicksum(dec_var.x[j, i, k] for j in N_H if j != i)
+            )
+
+    sp.addConstrs(gp.quicksum(dec_var.z[i, k] for i in N_H) <= Q for k in range(K))
+
+    sp.addConstrs(
+        dec_var.x_hat[s1.second_id, s2.second_id, k]
+        == gp.quicksum(
+            dec_var.x[i.second_id, j.second_id, k]
+            for i in s1.covering_stops
+            for j in s2.covering_stops
+            if i.second_id != j.second_id
+        )
+        for s1 in S
+        for s2 in S
+        if s1 != s2
+        for k in range(K)
+    )
+
+    # Subtour elimination (MTZ)
+    for k in range(K):
+        for i in S_ids:
+            for j in S_ids:
+                if i != j:  # and i != 0 and j != 0:
+                    sp.addConstr(
+                        dec_var.u[i, k]
+                        - dec_var.u[j, k]
+                        + Q * dec_var.x_hat[i, j, k]
+                        + (Q - 2) * dec_var.x_hat[j, i, k]
+                        <= Q - 1
+                    )
+    sp.addConstrs(
+        dec_var.u[i, k] >= dec_var.x_hat[i, 0, k] + (Q - 1) * dec_var.x_hat[0, i, k]
+        for i in S_ids
+        # if i != 0
+        for k in range(K)
+    )
+
+    return sp
+
+
+def _build_decision_variables(sp: gp.Model, problem_model: InputModel) -> DecisionVar:
+    K = problem_model.number_of_vehicles
+    Q = problem_model.capacity_of_vehicle
+    S_ids = problem_model.all_student_ids
+    N_H = problem_model.all_stop_ids[:-1]
 
     x = {}
     for k in range(K):
@@ -50,31 +201,26 @@ def main_problem(problem_model: InputModel, logger: logging.Logger):
         for k in range(K):
             z[i, k] = sp.addVar(vtype=GRB.BINARY, name=f"z_{i}_{k}")
 
-    # ---- Constraints ----
+    return DecisionVar(x=x, x_hat=x_hat, u=u, z=z)
 
-    sp.addConstrs(
-        gp.quicksum(z[i.second_id, k] for i in s.covering_stops for k in range(K)) == 1
-        for s in S
-    )
 
-    sp.addConstr(gp.quicksum(z[0, k] for k in range(K)) <= K)
+def main_problem(problem_model: InputModel, logger: logging.Logger):
+    K = problem_model.number_of_vehicles
+    max_route_distance = problem_model.max_travel_distance
+    d = problem_model.distance_matrix
+    N_H = problem_model.all_stop_ids[:-1]
+    W = problem_model.walking_distance_list
 
-    sp.addConstrs(
-        gp.quicksum(x[i, j, k] for j in N_H if j != i) == z[i, k]
-        for i in N_H
-        for k in range(K)
-    )
+    logger.info(f"number of nodes: {len(N_H)}")
 
-    for k in range(K):
-        for i in N_H:
-            if i == 0:
-                continue
-            sp.addConstr(
-                gp.quicksum(x[i, j, k] for j in N_H if j != i)
-                == gp.quicksum(x[j, i, k] for j in N_H if j != i)
-            )
+    sp = gp.Model("main_problem")
 
-    sp.addConstrs(gp.quicksum(z[i, k] for i in N_H) <= Q for k in range(K))
+    decision_var: DecisionVar = _build_decision_variables(sp, problem_model)
+
+    x = decision_var.x
+    z = decision_var.z
+
+    sp = _build_constraints(sp, decision_var, problem_model)
 
     sp.addConstrs(
         gp.quicksum(d[i, j] * x[i, j, k] for i in N_H for j in N_H if i != j)
@@ -82,114 +228,65 @@ def main_problem(problem_model: InputModel, logger: logging.Logger):
         for k in range(K)
     )
 
-    sp.addConstrs(
-        x_hat[s1.second_id, s2.second_id, k]
-        == gp.quicksum(
-            x[i.second_id, j.second_id, k]
-            for i in s1.covering_stops
-            for j in s2.covering_stops
-            if i.second_id != j.second_id
-        )
-        for s1 in S
-        for s2 in S
-        if s1 != s2
-        for k in range(K)
-    )
-
-    # Subtour elimination (MTZ)
-    for k in range(K):
-        for i in S_ids:
-            for j in S_ids:
-                if i != j:  # and i != 0 and j != 0:
-                    sp.addConstr(
-                        u[i, k]
-                        - u[j, k]
-                        + Q * x_hat[i, j, k]
-                        + (Q - 2) * x_hat[j, i, k]
-                        <= Q - 1
-                    )
-    sp.addConstrs(
-        u[i, k] >= x_hat[i, 0, k] + (Q - 1) * x_hat[0, i, k]
-        for i in S_ids
-        # if i != 0
-        for k in range(K)
-    )
-
-    # Set initial objective
     obj = gp.quicksum(W[i] * z[i, k] for i in N_H for k in range(K))
     sp.setObjective(obj, GRB.MINIMIZE)
 
     sp.params.TimeLimit = 1800
     sp.params.OutputFlag = 0
 
-    # start timer
     start_time = datetime.now()
 
-    # ---- Solve ----
     sp.optimize()
 
     end_time = datetime.now()
+
     elapsed_time = end_time - start_time
     logger.info(f"Main problem solved in {elapsed_time.total_seconds():.2f} seconds")
 
     if sp.status == GRB.OPTIMAL:
-        logger.info(f"Main problem objective : {sp.objVal}")
-        final_route = []
-        routes = {}
-        for k in range(K):
-            new_nodes = [0]
-            current = 0
-            while True:
-                found = False
-                for j in N_H:
-                    if (
-                        j != current
-                        and x.get((current, j, k)) is not None
-                        and x[current, j, k].X > 0.5
-                    ):
-                        next_node = j
-                        found = True
-                        break
-                if not found or next_node == 0:
-                    break
-                new_nodes.append(next_node)
-                current = next_node
-            new_nodes.append(problem_model.last_depot.second_id)  # 0)
-            routes[k] = new_nodes
+        final_route = _build_route_solution(sp, problem_model, decision_var, logger)
 
-        for k in range(K):
-            pickup_stop_students = {}
-            for i in N_H:
-                if z[i, k].X > 0.5 and i != 0:
-                    for s in S:
-                        Cs = s.covering_stops
-                        if any(c.second_id == i for c in Cs):
-                            pickup_stop_students[s] = i
-            covered_students = [
-                s for s in S if any(z[i.second_id, k].X > 0.5 for i in s.covering_stops)
-            ]
-            route_cost = sum(W[i] for i in N_H if z[i, k].X > 0.5)
-            total_distance = sum(
-                d[i, j] * x[i, j, k].X
-                for i in N_H
-                for j in N_H
-                if i != j
-                if x[i, j, k].X > 0.5
-            )
+        return ModelSuccess.SUCCESS, final_route
+    else:
+        logger.warning(f"Subproblem not optimal or infeasible; status: {sp.status}")
+        return ModelSuccess.INFEASIBLE, None
 
-            logger.info(
-                f"New route nodes:{routes[k]} covered_students: {[s.second_id for s in covered_students]}- total walking distance:{route_cost}- total distance:{total_distance}"
-            )
-            result_route = Route(
-                stops=routes[k],
-                served_students=[s.second_id for s in covered_students],
-                total_distance=total_distance,
-                total_walking_distance=route_cost,
-            )
 
-            final_route.append(result_route)
+def shotest_path_problem(problem_model: InputModel, logger: logging.Logger):
+    K = problem_model.number_of_vehicles
+    d = problem_model.distance_matrix
+    N_H = problem_model.all_stop_ids[:-1]
 
-            
+    logger.info(f"number of nodes: {len(N_H)}")
+
+    sp = gp.Model("main_shortest_path_problem")
+
+    decision_var: DecisionVar = _build_decision_variables(sp, problem_model)
+
+    x = decision_var.x
+    sp = _build_constraints(sp, decision_var, problem_model)
+
+    obj = gp.quicksum(
+        d[i, j] * x[i, j, k] for i in N_H for j in N_H if i != j for k in range(K)
+    )
+    sp.setObjective(obj, GRB.MINIMIZE)
+
+    sp.params.TimeLimit = 1800
+    sp.params.OutputFlag = 0
+
+
+    start_time = datetime.now()
+
+    sp.optimize()
+
+    end_time = datetime.now()
+
+    elapsed_time = end_time - start_time
+    logger.info(f"Main problem solved in {elapsed_time.total_seconds():.2f} seconds")
+
+    if sp.status == GRB.OPTIMAL:
+
+        final_route = _build_route_solution(sp, problem_model, decision_var, logger)
 
         return ModelSuccess.SUCCESS, final_route
     else:

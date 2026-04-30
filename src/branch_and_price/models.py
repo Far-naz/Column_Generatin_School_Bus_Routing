@@ -4,7 +4,6 @@ import module.sucess_result as mr
 import logging
 from module.input_model import InputModel
 from module.route import Route
-from module.stop_point import Student
 import math
 from branch_and_price.branch_and_bound import filter_routes_by_branch_rules
 from typing import Optional
@@ -27,32 +26,6 @@ def check_new_route_is_duplicate(
         ):
             return True
     return False
-
-
-def create_initial_route(
-    students: list[Student], distance: dict[tuple, float], problem_model: InputModel
-) -> Route:
-    """Create an initial route that covers all students in a single route."""
-    first_depot = problem_model.first_depot
-    last_depot = problem_model.last_depot
-
-    # Create a route that goes from first depot to each student's covering stop and then to last depot
-    stops = [first_depot]
-    for student in students:
-        stops.append(student)
-    stops.append(last_depot)
-
-    route_distance = sum(
-        distance[stops[i].second_id, stops[i + 1].second_id]
-        for i in range(len(stops) - 1)
-    )
-
-    return Route(
-        stops=stops,
-        served_students=[student.second_id for student in students],
-        total_walking_distance=10000,
-        total_distance=route_distance,
-    )
 
 
 def restricted_master_problem(
@@ -136,7 +109,6 @@ def restricted_master_problem(
 
     if m.status != GRB.OPTIMAL:
         logger.info("RMP not optimal. Stopping.")
-        # if return_full:
         return RMPResult(
             success=False,
             pi={},
@@ -146,17 +118,11 @@ def restricted_master_problem(
             lambda_values=[],
             is_integer=False,
         )
-        # return None, None
 
     lambda_values = [lambda_vars[r].X for r in range(len(feasible_routes))]
 
     for r, route in enumerate(feasible_routes):
-        logger.info(
-            f"Lambda for Route {r}: {lambda_values[r]} -> "
-            f"stops {[stop.second_id for stop in route.stops]}, "
-            f"walk_dis {route.total_walking_distance}, "
-            f"cover_stds {route.served_students}"
-        )
+        logger.info(f"Lambda for Route {r}: {lambda_values[r]} -> {str(route)}")
         route.lambda_value = lambda_values[r]
 
     # Routes filtered out by branching should not look active
@@ -167,11 +133,10 @@ def restricted_master_problem(
     pi = {s: covers[s].Pi for s in S}
     mu = vehicle_limit.Pi
 
-    logger.info(f"Duals: {pi}, {mu}")
+    logger.info(f"Duals: {pi}, {mu}, obj: {m.ObjVal}")
 
     is_integer = all(abs(v - round(v)) <= 1e-6 for v in lambda_values)
 
-    # if return_full:
     return RMPResult(
         success=True,
         pi=pi,
@@ -181,71 +146,6 @@ def restricted_master_problem(
         lambda_values=lambda_values,
         is_integer=is_integer,
     )
-
-    # return pi, mu
-
-
-def restricted_master_problem_before(
-    routes: list[Route],
-    problem_model: InputModel,
-    logger: logging.Logger,
-):
-
-    S, K = problem_model.students, problem_model.number_of_vehicles
-    S_ids = problem_model.all_student_ids
-
-    m = gp.Model()
-    # LP relaxation for duals
-    lambda_vars = [
-        m.addVar(vtype=GRB.CONTINUOUS, name=f"lambda_{r}") for r in range(len(routes))
-    ]
-
-    # Objective
-    m.setObjective(
-        gp.quicksum(
-            lambda_vars[r] * route.total_walking_distance
-            for r, route in enumerate(routes)
-        ),
-        GRB.MINIMIZE,
-    )
-
-    # Each student covered exactly once
-    covers = m.addConstrs(
-        (
-            gp.quicksum(
-                lambda_vars[r]
-                for r, route in enumerate(routes)
-                if s in route.served_students
-            )
-            >= 1
-            for s in S_ids
-        ),
-        name="cover",
-    )
-
-    # Vehicle limit
-    vehicle_limit = m.addConstr(
-        gp.quicksum(lambda_vars[r] for r, _ in enumerate(routes)) <= K,
-        name="vehicle_limit",
-    )
-
-    m.params.OutputFlag = 0
-    m.optimize()
-    if m.status != GRB.OPTIMAL:
-        logger.info("RMP not optimal. Stopping.")
-        return None, None
-    else:
-        # print lambda values
-        for r, route in enumerate(routes):
-            logger.info(
-                f"Lambda for Route {r}: {lambda_vars[r].X} -> stops {[stop.second_id for stop in route.stops]}, walk_dis {route.total_walking_distance}, cover_stds {route.served_students}"
-            )
-            route.lambda_value = lambda_vars[r].X
-        # Get duals
-        pi = {s: covers[s].Pi for s in S_ids}
-        mu = vehicle_limit.Pi
-        logger.info(f"Duals: {pi}, {mu}")
-        return pi, mu
 
 
 def pricing_problem(
@@ -273,7 +173,7 @@ def pricing_problem(
         (rule.student_a, rule.student_b, rule.mode) for rule in branch_rules
     )
     cache_key = (id(problem_model), branch_signature)
-    cached_model = None# _PRICING_MODEL_CACHE.get(cache_key)
+    cached_model = None  # _PRICING_MODEL_CACHE.get(cache_key)
 
     N_H = problem_model.all_stop_ids
     S = problem_model.students
@@ -394,7 +294,9 @@ def pricing_problem(
             a, b = rule.student_a, rule.student_b
 
             if a not in y or b not in y:
-                raise ValueError(f"Branch rule uses students not in pricing vars: {(a, b)}")
+                raise ValueError(
+                    f"Branch rule uses students not in pricing vars: {(a, b)}"
+                )
 
             if rule.mode == "together":
                 sp.addConstr(y[a] == y[b], name=f"branch_together_{a}_{b}_{idx}")
@@ -435,9 +337,23 @@ def pricing_problem(
     sp.optimize()
 
     if sp.status == GRB.OPTIMAL:
-        logger.info(f"Subproblem objective (reduced cost): {sp.objVal}")
+        # if sp.ObjVal > -0.1:
+        #    logger.info(f"{[z[i].X for i in N_H]}")
+        #    logger.info(f"{[y[s].X for s in S_ids]}")
 
-        if sp.objVal < -1e-6:
+        obj_calculated = (
+            sum(W[i] for i in N_H if z[i].X > 0.5)
+            - sum(pi[s] for s in S_ids if y[s].X > 0.5)
+            - mu
+        )
+
+        # TODO, why is it so different in very small number of z and y
+        logger.info(
+            f"Subproblem objective (reduced cost): {sp.objVal}, manual calculation of Obj:{obj_calculated}"
+        )
+
+        if obj_calculated < -1e-6:
+
             first = first_depot_index
             last = last_depot_index
 
@@ -491,7 +407,7 @@ def pricing_problem(
             logger.info(
                 f"New route nodes:{new_nodes} "
                 f"covered_students:{covered_students} "
-                f"students pick up point:{[f'{s} -> {pickup_stops_students[s]}' for s in pickup_stops_students]} "
+                f"students pick up point:{[f'{s.second_id} -> {pickup_stops_students[s]}' for s in pickup_stops_students]} "
                 f"total walking distance:{route_cost} "
                 f"total distance:{total_distance}"
             )

@@ -1,10 +1,11 @@
 from module.input_model import InputModel, DataSource
 from helper.logger_setup import setup_logger
-from math_modelling.mip_model import main_problem
+from math_modelling.mip_model import main_problem, shotest_path_problem
 from module.sucess_result import ModelSuccess
 from branch_and_price.column_generation import main_column_generation
 from module.route import Route
-from branch_and_price.models import create_initial_route, solve_final_model
+from branch_and_price.models import solve_final_model
+from branch_and_price.warm_start import create_initial_route
 from heuristic.helper import drop_duplicate_students
 
 import logging
@@ -13,13 +14,14 @@ from datetime import datetime
 
 def main() -> None:
     mip_model = False
+    shortest_path_problem = False
     problem_model = InputModel(
         number_of_vehicles=2,
         capacity_of_vehicle=10,
-        max_travel_distance=41.0,
+        max_travel_distance=110.29,
         data_source=DataSource.REAL,
         allowed_walking_distance=0.5,
-        school_id=42539,
+        school_id=33337,
     )
     model_info = (
         f"[S={len(problem_model.students)}"
@@ -32,18 +34,22 @@ def main() -> None:
     print(f"total number of stops: {len(problem_model.all_stops)}")
 
     if mip_model:
-        logger = setup_logger(f"milp_model_{model_info}")
+        if shortest_path_problem:
+            logger = setup_logger(f"milp_model_shortest_path_{model_info}")
 
-        result, route = main_problem(problem_model, logger)
-        if result == ModelSuccess.SUCCESS:
+            result, routes = shotest_path_problem(problem_model, logger)
+        else:
+            logger = setup_logger(f"milp_model_{model_info}")
+
+            result, routes = main_problem(problem_model, logger)
+
+        if result == ModelSuccess.SUCCESS and routes:
             print(
-                f'total route distance: {sum(r.total_distance for r in route) if route else "N/A"}'
-            )
-            print(
-                f'total walking distance: {sum(r.total_walking_distance for r in route) if route else "N/A"}'
+                f"total route distance: {sum(r.total_distance for r in routes)}, total walking distance: {sum(r.total_walking_distance for r in routes)}"
             )
         else:
             print("Model did not find a successful solution.")
+
     else:
         logger: logging.Logger = setup_logger(f"column_generation_{model_info}")
 
@@ -77,7 +83,7 @@ def main() -> None:
             logger.info("Final routes:")
             for r, route in enumerate(polished_routes):
                 logger.info(
-                    f"Route {r}: {[s.second_id for s in route.stops]}- Distance: {route.total_distance}, Served students: {route.served_students}, walking distance: {route.total_walking_distance}"
+                    f"Route {r}: {str(route)}"
                 )
             logger.info(
                 f'total route distance: {sum(r.total_distance for r in polished_routes) if polished_routes else "N/A"}, total walking distance: {sum(r.total_walking_distance for r in polished_routes) if polished_routes else "N/A"}'

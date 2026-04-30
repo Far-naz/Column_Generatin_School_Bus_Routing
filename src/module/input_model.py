@@ -72,6 +72,7 @@ class InputModel:
         self.distance_matrix = compute_distance_matrix(
             self.all_stop_ids, self.all_stops, self.distance_metric
         )
+        self.upper_bound = allowed_walking_distance * len(self.all_stop_ids)
 
     def get_stop(self, stop_id) -> Stop:
         if stop_id is None:

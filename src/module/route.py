@@ -34,3 +34,11 @@ class Route:
             served_students=self.served_students.copy() if isinstance(self.served_students, set) else set(self.served_students),
             cost=self.cost,
         )
+
+    def __str__(self) -> str:
+        string_result = f"walk_dis: {self.total_walking_distance},"
+        string_result += f"route_dis: {self.total_distance},"
+        string_result += f"stops: {[s.second_id for s in self.stops]}, "
+        string_result += f"Served students: {self.served_students}"
+            
+        return string_result

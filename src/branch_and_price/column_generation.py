@@ -168,6 +168,22 @@ class ColumnGenerationSolver:
                 routes = candidate_routes if candidate_routes is not None else routes
 
             if result_mode != ModelSuccess.SUCCESS:
+                if (
+                    self.is_heuristic == False
+                    and rmp.obj_value > self.problem_model.upper_bound
+                    and len(rmp.lambda_values) > 0
+                    and rmp.lambda_values[0] > 0
+                ):
+                    self.logger.warning(
+                        f"This problem is probably infeasible. obj:{rmp.obj_value}, route_0:{rmp.lambda_values[0]}, upper_bound:{self.problem_model.upper_bound}"
+                    )
+                    return ColumnGenerationResult(
+                        success=False,
+                        routes=routes,
+                        rmp=rmp,
+                        result_mode=ModelSuccess.INFEASIBLE,
+                        integer_found=False,
+                    )
                 self.logger.info(
                     f"Column generation stopped with result mode {result_mode}"
                 )
